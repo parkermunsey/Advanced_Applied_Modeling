@@ -78,29 +78,38 @@ Modeling Tables:
 
 ## Repository Structure
 
-    project_root/
-    │
-    ├── scripts/
-    │   ├── load_mlb_games_weather_to_postgres.py
-    │   ├── build_features.py
-    │   ├── export_features_for_model.py
-    │   ├── train_model.py
-    │   ├── evaluate_model.py
-    │   ├── write_forecasts_to_postgres.py
-    │
-    ├── data/                  (parquet train/valid/test)
-    ├── models/                (saved models)
-    ├── outputs/               (predictions)
-    │
-    ├── dashboard/
-    │   └── dashboard_app_mlb.py
-    │
-    ├── media/
-    │   └── mlb_logo1.png
-    │
-    ├── requirements.txt
-    ├── .env.example
-    └── README.md
+- **[scripts](scripts/)**: Core Python pipeline for data ingestion, feature engineering, modeling, and forecasting.
+
+  - **[load_mlb_games_weather_to_postgres.py](scripts/load_mlb_games_weather_to_postgres.py)**: Pulls MLB game data and weather data from APIs and loads into PostgreSQL.
+
+  - **[build_features.py](scripts/build_features.py)**: Transforms raw data into a model-ready feature table.
+
+  - **[export_features_for_model.py](scripts/export_features_for_model.py)**: Extracts data from PostgreSQL and creates train/validation/test datasets.
+
+  - **[train_model.py](scripts/train_model.py)**: Trains the machine learning model.
+
+  - **[evaluate_model.py](scripts/evaluate_model.py)**: Evaluates model performance and generates predictions with intervals.
+
+  - **[write_forecasts_to_postgres.py](scripts/write_forecasts_to_postgres.py)**: Writes final predictions into the database.
+
+---
+
+- **[dashboard](dashboard/)**: Streamlit application used to visualize forecasts and analyze attendance drivers.
+
+  - **[dashboard_app_mlb.py](dashboard/dashboard_app_mlb.py)**: Main dashboard application.
+
+---
+
+- **[media](media/)**: Contains images and assets used in documentation (including project logo).
+
+---
+
+- **[requirements.txt](requirements.txt)**: Python dependencies required to run the project.
+
+- **[.env.example](.env.example)**: Example environment variables for database connection.
+
+- **[README.md](README.md)**: Project overview, setup instructions, and documentation.
+
 
 ---
 
