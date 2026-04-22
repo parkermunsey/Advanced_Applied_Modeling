@@ -4,7 +4,7 @@
   <img src="media/mlb_logo1.png" width="140"/>
 </p>
 
-<h3 align="center">Forecasting Game-Level Demand with Data</h3>
+<h3 align="center">Forecasting Game-Level Demand</h3>
 
 <p align="center">
   <em>
