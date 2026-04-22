@@ -154,19 +154,86 @@ Modeling Tables:
 
 ## Dashboard Overview
 
-Executive Forecast View:
-- Predicted attendance  
-- Confidence intervals  
-- Risk flags (High Crowd, Weather Risk)  
+The Streamlit dashboard serves as the presentation layer for the MLB Attendance Intelligence Platform. It translates model outputs and historical data into a clean, interactive interface designed for both analysis and decision-making.
 
-Attendance Drivers:
-- Weather vs attendance  
-- Team performance vs attendance  
-- Correlation analysis  
+The dashboard is organized into three core views:
 
-Scenario Simulator:
-- Adjust inputs  
-- View projected attendance instantly  
+---
+
+### Executive Forecast View
+
+This page provides a high-level summary of predicted attendance across upcoming games. It is designed for quick decision-making and prioritization.
+
+**Key features:**
+- Total games in view and average predicted attendance
+- Daily forecast trend with expected ranges (uncertainty bands)
+- Identification of high-priority games based on demand signals
+- Risk flags such as **High Crowd** and **Weather Risk**
+- Summary tables highlighting the most important upcoming matchups
+
+<p align="center">
+  <img src="media/initial_dash.png" width="800"/>
+</p>
+
+---
+
+### Attendance Drivers
+
+This page focuses on explaining *why* attendance behaves the way it does by analyzing historical patterns.
+
+**Key insights include:**
+- Relationship between **temperature and attendance**
+- Impact of **team performance (rolling win %)**
+- Comparison of **weekday vs weekend attendance**
+- Top teams ranked by average attendance
+- Variability in attendance across teams
+- Correlation analysis between key numeric features
+
+The visuals are simplified to highlight the most important patterns while keeping the page readable by focusing on the top teams.
+
+<p align="center">
+  <img src="media/charts.png" width="800"/>
+</p>
+
+<p align="center">
+  <img src="media/team_attendance.png" width="800"/>
+</p>
+
+---
+
+### Scenario Simulator
+
+This page allows users to interactively explore how different conditions impact expected attendance.
+
+**Users can adjust:**
+- Home team and opponent strength
+- Day of week
+- Temperature and precipitation
+- Recent team performance
+- Promotion or special event indicator
+
+The simulator generates:
+- Projected attendance
+- Expected range (low to high)
+- A clear explanation of how each factor contributes to the final estimate
+
+This view is designed to be **presentation-friendly**, helping non-technical users understand how attendance changes under different scenarios.
+
+<p align="center">
+  <img src="media/scenario_dash.png" width="800"/>
+</p>
+
+---
+
+## Summary
+
+The dashboard bridges the gap between data and decision-making by combining:
+
+- Forecasting (what will happen)
+- Analysis (why it happens)
+- Simulation (what could happen)
+
+Together, these components create a complete attendance intelligence tool that is both technically robust and easy to interpret.
 
 ---
 
