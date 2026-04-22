@@ -1,4 +1,4 @@
-<h1 align="center">MLB Attendance Intelligence Platform</h1>
+<h1 align="center">MLB Attendance Analysis</h1>
 
 <p align="center">
   <img src="media/mlb_logo1.png" width="140"/>
